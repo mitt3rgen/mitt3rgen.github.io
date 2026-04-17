@@ -1,0 +1,9 @@
+name: Run My Script
+on: [push, workflow_dispatch] # push or manual trigger
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4 # Gets your code
+      - name: Run Script
+        run: python my_script.py # Or ./my_script.sh
